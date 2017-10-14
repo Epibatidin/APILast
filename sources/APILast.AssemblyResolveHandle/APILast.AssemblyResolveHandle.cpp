@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "AssemblyResolveHandle.h"
+#include "APILast.AssemblyResolveHandle.h"
 
 System::Reflection::Assembly ^ OnAssemblyResolve(System::Object ^sender, System::ResolveEventArgs ^args);
 
@@ -7,7 +7,6 @@ extern "C" __declspec(dllexport) void __stdcall RegisterHandler()
 {
 	AppDomain::CurrentDomain->AssemblyResolve += gcnew System::ResolveEventHandler(&OnAssemblyResolve);
 }
-
 
 System::Reflection::Assembly ^ OnAssemblyResolve(System::Object ^sender, System::ResolveEventArgs ^args)
 {

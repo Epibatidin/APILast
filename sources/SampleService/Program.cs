@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace SampleService
 {
@@ -10,6 +7,21 @@ namespace SampleService
     {
         static void Main(string[] args)
         {
+            Process me = Process.GetCurrentProcess();
+            Console.WriteLine($"Hello my Name is {me.ProcessName} i am unique with my ID {me.Id}");
+
+            AppDomain.CurrentDomain.AssemblyLoad += CurrentDomain_AssemblyLoad;
+
+            Console.WriteLine("Hit enter for Process Shutdown");
+            Console.ReadLine();
+            Console.WriteLine("enter recieved shutting down");
         }
+        
+        private static void CurrentDomain_AssemblyLoad(object sender, AssemblyLoadEventArgs args)
+        {
+            Console.WriteLine("CurrentDomain_AssemblyLoad: " + args.LoadedAssembly.Location);
+        }
+
+
     }
 }
