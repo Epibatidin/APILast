@@ -11,7 +11,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="APILast.AssemblyResolveHandle.h">
+    <ClInclude Include="APILast.CtoSharpBridge.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="Stdafx.h">
@@ -22,7 +22,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="APILast.AssemblyResolveHandle.cpp">
+    <ClCompile Include="APILast.CtoSharpBridge.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="AssemblyInfo.cpp">

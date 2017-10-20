@@ -1,5 +1,4 @@
 ﻿using APILast.Abstractions;
-using APILast.DomainObjects.Configuration;
 using APILast.Stuff.Configuration;
 using Castle.Windsor;
 using Microsoft.AspNetCore.Builder;
@@ -7,9 +6,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Text;
 
 namespace APILast.Stuff
 {
@@ -31,17 +28,24 @@ namespace APILast.Stuff
 
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
-            var processes = _config.GetSection("Processes").Get<ProcessConfig[]>();
-            services.AddSingleton<IProcessResolver>(new ProcessResolver(processes));
-
-            var natives = _config.GetSection("Natives").Get<NativeConfig>();
-
-            var libLoader = new LibaryLoader(natives);
-            libLoader.LoadLibariesIntoProcess(Process.GetCurrentProcess().Id);
+            //var processes = _config.GetSection("Processes").Get<ProcessConfig[]>();
+            //services.AddSingleton<IProcessResolver>(new ProcessResolver(processes));
+            //services.AddSingleton<IServiceConnectionFactory, ServiceConnectionFactory>();
 
 
 
-            return services.BuildServiceProvider();
+            //var natives = _config.GetSection("Native").Get<NativeConfig>();
+
+            //var libLoader = new LibraryLoader(natives);
+            //var me = Process.GetCurrentProcess();
+
+
+            //var nativeHandles = libLoader.LoadNativeLibariesInProcess(me.Id);
+
+
+
+            //return services.BuildServiceProvider();
+            return null;
 
         }
     }

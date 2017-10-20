@@ -1,4 +1,4 @@
-﻿using System.Runtime.InteropServices;
+﻿using System;
 
 namespace APILast.DomainObjects
 {
@@ -10,7 +10,7 @@ namespace APILast.DomainObjects
 
         public int ProcessId { get; set; }
 
-        public SafeHandle ProcessHandle { get; set; }
+        public IntPtr ProcessHandle { get; set; }
 
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace APILast.DomainObjects.Configuration
+﻿namespace APILast.Remote
 {
     public class NativeConfig
     {

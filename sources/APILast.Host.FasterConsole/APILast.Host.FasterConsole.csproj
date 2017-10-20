@@ -2,11 +2,18 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TargetFramework>netcoreapp2.0</TargetFramework>	
+    <RuntimeIdentifiers>win10-x86;</RuntimeIdentifiers>	
+    <StartupObject>APILast.FasterConsoleHost.Program</StartupObject>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\APILast.Abstractions\APILast.Abstractions.csproj" />
+    <ProjectReference Include="..\APILast.Remote\APILast.Remote.csproj" />
     <ProjectReference Include="..\APILast.Stuff\APILast.Stuff.csproj" />
   </ItemGroup>
 
