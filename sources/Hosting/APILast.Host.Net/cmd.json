@@ -1,0 +1,10 @@
+{
+  "Native": {
+    "NativeLibDirectory": "D:\\Develop\\APILast\\sources\\Debug",
+    "CtoSharpLib": "APILast.CtoSharpBridge.dll",
+    "AssemblyResolveHandle": "APILast.AssemblyResolveHandle.dll"
+  },
+  "Services": {
+    "SampleService.Net": 11176
+  }
+}
