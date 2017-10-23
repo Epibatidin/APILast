@@ -62,7 +62,7 @@ namespace APILast.NetHost
             var functionPosInRemoteProcess = IntPtr.Add(remoteHandle.AssemblyResolveHandleLibHandle, offsetforResolve.ToInt32());
 
             var moreRemote = new RemoteFunction(remoteHandle.ProcessHandle, functionPosInRemoteProcess, Encoding.ASCII);
-            moreRemote.Execute(@"D:\Develop\APILast\sources\Debug\");
+            moreRemote.Execute(configuration.Native.NativeLibDirectory);
 
             var functionPosInRemoteProcess2 = IntPtr.Add(remoteHandle.CtoSharpLibHandle, offsetforInvoker.ToInt32());
 
@@ -78,6 +78,7 @@ namespace APILast.NetHost
             // free libaries in own process
             
             // foobazen
+
 
 
 

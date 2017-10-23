@@ -5,6 +5,6 @@
     "AssemblyResolveHandle": "APILast.AssemblyResolveHandle.dll"
   },
   "Services": {
-    "SampleService.Net": 11176
+    "SampleService.Net": 6084
   }
 }
